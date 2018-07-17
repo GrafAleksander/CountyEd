@@ -1,0 +1,103 @@
+#outside{
+                  margin-top: 40px;
+               }
+               #content{
+                  font-size: 1.25em;
+               }
+               #right{
+                  margin-left: 20%;
+               }
+               #left{
+                  float: left;
+                  margin-left: 30%;
+               }
+               #f{
+                  margin-top: 10px; 
+               }
+               #par{
+                  margin-top: 10px;
+                  line-height: 28px;
+               }
+               #par1{
+                  margin-top: -1px;
+                  line-height: 30px;
+               }
+               #par2{
+                  margin-top: -10px;
+                  line-height: 30px;
+               }
+               #par3{
+                  margin-top: -8px;
+                  line-height: 30px;
+               }
+               #form1{
+                  border-top: 1px solid lightgrey;
+                  margin-top: 20px;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  padding-left: 30%;
+               }
+               #f2{
+                  margin-top: 10px;
+                  width: 120px;
+                  height: 30px;
+               }
+               #comment{
+                  margin-left: 130px;
+                  margin-top: -30px;
+               }
+               #footer{
+                  margin-top: 100px;
+               }
+               #foot_line{
+                  margin-top: 90px;
+               }
+              #t2{
+                  display: none;
+              }
+              #mess{
+                  margin-top: 10px;
+                  display: none;
+              }
+              @media(max-width: 800px){
+                #form1{
+                  padding-left: 10%;
+                }
+                #left{
+                  margin-left: 10%;
+                }
+              }
+              @media(max-width: 500px){
+                #left{
+                   display: none; 
+                }
+                #right{
+                   margin-left: 25%;
+                   margin-right: 25%;
+                } 
+                #form1{
+                   padding-left: 5%;  
+                }
+                #mess{
+                   display: block;
+                }
+              }
+              @media(max-width: 480px){
+                  #t1{
+                     display: none;
+                  }
+                  #t2{
+                     display: block;
+                  }
+                  #form1{
+                     padding-left: 15%;
+                  }
+                  #comment{
+                     display: none;
+                  }
+              }
+              @media(max-width: 400px){
+                  #form1{
+                     padding-left: 2%;
+                  }
+              }

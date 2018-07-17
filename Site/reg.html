@@ -1,0 +1,132 @@
+﻿<html>
+  <head>
+        <meta charset="utf-8">	
+     <title>Зворотній зв'язок</title>
+        <meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="robots" content="all,index,follow">
+	<meta name="distribution" content="global">
+	<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="style\main.css">
+            <link rel="stylesheet" type="text/css" href="style\reg.css">
+         <script src="script\device.js"></script>
+         <script src="script\reg.js">
+         </script>
+            <script>
+              window.onscroll = function(){
+           var pageY = pageYOffset || document.documentElement.scrollTop;
+           var pageLabel = pageY;
+           var i = pageYOffset || document.documentElement.scrollTop;     
+           var outside = document.getElementById("outside");
+ 
+           if(i >= 180){
+              outside.style.marginTop = -60;
+              outside.style.position = "fixed";
+           }
+           else{
+             outside.style.marginTop = 40;
+              outside.style.position = "static";
+           }
+        }
+            </script>
+  </head>
+       <body>
+
+
+             
+             <div id="menu1"><a href="index.html">Головна <div id="line"></a></div></div>
+             <div id="menu2"><a href="sad.html">Садки <div id="line"></a></div></div>
+             <div id="menu3"><a href="info.html">Про нас <div id="line"></a></div></div>
+             <div id="menu4"><a href="reg.html">Зворотній зв'язок <div id="line" style="opacity: 1;"></a></div></div>
+
+           <div id="menu"><div class="z"><img src="image/search.png" onclick=Founder("")></div><div id="scroll_bar"><img src="image/scroll.png" onclick=up(0)></div></div>
+           <div id="menu_help"><img src="image/menu.png"></div>
+              <div id="outside_menu"> 
+               <div id="menu_1"><a href="index.html">Головна</a></div>
+               <div id="menu_2"><a href="sad.html">Садки</a></div>
+               <div id="menu_3"><a href="galery.html">Про нас</a></div>
+              <div id="menu_4"><a href="reg.html">Зворотній зв'язок</a></div>
+               
+              </div>
+      
+                <div id="outside" style="position: fixed;">
+                     <div class="content" style="margin-top: 60px; text-align: center;">
+                        Або вы можете війти<br>
+                        <input type="email" id="f" placeholder="Ваш email" style="width: 40%;">
+                        <input type="password" id="f" placeholder="Пароль" style="width: 40%;"><br><br>
+                        <textarea cols="30" rows="5" id="t1"> </textarea>
+                           <textarea cols="35" rows="3" id="t2" placeholder="Ваше повідомлення"></textarea><br>
+                           <p style="text-align: left;">
+                           <input type="button" id="f2" value="Відправити" style="width: 35%;"> <div id="comment" style="font-size: 0.9em; float: left; margin-top: -45px;">  Дякуємо за ваш відгук</div>
+                           </p>
+                     </div>
+                    <p id="index_outside" style="margin-top: 50px;">Пошук на сайті</p>
+                     <input type="search" id="search">
+                </div>
+
+                <div id="main" style="margin-bottom: 20px">
+                    <div class="content">
+                       <div id="h">Заповніть анкету</div>
+                         <div id="left">  
+                           <div id="par">      
+                            Призвище<br>
+                            Ім'я<br><br>
+                           </div>
+
+                           <div id="par1">  
+                            Країна<br>
+                            Місто<br><br>
+                           </div>
+
+                           <div id="par2">  
+                            Дата народження<br>
+                            Стать<br><br>
+                           </div>
+
+                           <div id="par3">                              
+                            Ваш email<br>
+                            Пароль<br><br>
+                           </div>
+                         </div>              
+
+                         <div id="right">
+                           <input type="text" id="f" placeholder="Призвище"><br>
+                           <input type="text" id="f" placeholder="Ім'я"><br><br>
+
+                           <input type="text" id="f" placeholder="Країна"><br>
+                           <input type="text" id="f" placeholder="Місто"><br><br>
+
+                           <input type="date" placeholder="Дата народження" id="f"><br><div id="mess">Чоловік/Жінка</div>
+                           <input type="radio" id="f" name="ch"> <input type="radio" name="ch"><br><br>
+
+                           <input type="email" id="f" placeholder="Ваш email"><br>
+                           <input type="password" placeholder="Пароль" id="f"><br><br>
+                          
+                         </div>  
+                            <div id="form1">
+                           <textarea cols="46" rows="5" id="t1"> </textarea>
+                           <textarea cols="35" rows="3" id="t2"> </textarea><br>
+                           <input type="button" id="f2" value="Відправити"> <div id="comment">Дякуємо за ваш відгук</div>
+                            </div>
+                    </div>
+                </div>
+
+
+             <div class="founder">
+               <p id="index_founder">Пошук на сайті</p>
+               <input type="search" class="search" placeholder="Що шукати?">
+                 <hr>
+                  <div id="result"></div>
+                  <div class="hr-br"></div>
+                  <div class="back" onclick="ExitFoundMode()">Повернутися до сайту.</div>
+             </div>
+
+                <div id="foot_line"></div>
+              <div id="footer">
+                 <div id="foot_text">Сайт створив *******</div>
+                  
+                 <div id="foot_text">Телефон 000000000</div>
+              </div>
+               
+       </body>
+</html>
