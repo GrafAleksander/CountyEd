@@ -2,90 +2,723 @@
   <head>
         <meta charset="utf-8">	
      <title>Пошук шкіл</title>
-        <meta name="description" content="">
+    <meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="robots" content="all,index,follow">
 	<meta name="distribution" content="global">
 	<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-            <link rel="stylesheet" type="text/css" href=" \public\style\main.css">
-         <script src="\public\script\device.js"></script>
-         <script src="\public\script\main.js"></script> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">        
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="     sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+         <link rel="stylesheet" type="text/css" href="style\main.css">
+         <script src="script\device.js"></script>
+         <script src="script\main.js"></script> 
+         <style src="style\main.css" ></style>
+<style type="text/css">
+	#new{
+		margin-top: -110px;
+	}
+  body{
+              background: #efefef;
+              margin: 0px;
+              padding: 0px;
+              overflow-x: hidden;
+           }
+           #line{
+              position: absolute;
+              width: 10%;
+              height: 5px;
+              background: #eeeeee;
+              opacity: 0;
+              transition-duration: 0.4s;
+              -webkit-transition-duration: 0.4s;
+              -i-transition-duration: 0.4s;
+              -o-transition-duration: 0.4s;
+              -moz-transition-duration: 0.4s;
+              margin-top: -42px;
+              margin-left: 4.5%;
+           }
+           #menu_help{
+              position: absolute;
+              color: white;
+              font-size: 1.6em;
+              font-family: monotype corsiva;
+              margin-left: 2%;
+              margin-top: 15px;
+              display: none;
+              cursor: pointer;
+           }
 
- 
-         
+           #menu{
+
+             width: 101.15%;
+             background: #191919; 
+             height: 80px;
+             margin-left: -10px;
+
+              
+           }
+
+           #menu1{
+              margin-left: 12%;
+           }
+           #menu3{
+              position: absolute;
+              margin-left: 49.4%;
+           }
+           #menu4{
+
+              margin-left: 69.2%;
+              margin-top: -68px;
+
+           }
+           
+
+           #menu3 #line{
+              margin-left: 22%;
+              width: 56%;
+           }
+           #menu1, #menu2, #menu3, #menu4{
+              width: 19%;
+              height: 50px;
+              padding-top: 17px;
+              background: #191919;
+              color: #efefef;
+              font-family: Tahoma;
+              font-size: 1.3em;
+              text-align: center;
+              float: left;
+              transition-duration: 0.4s;
+              -webkit-transition-duration: 0.4s;
+              -i-transition-duration: 0.4s;
+              -o-transition-duration: 0.4s;
+              -moz-transition-duration: 0.4s;
+              display: block;
+              cursor: pointer;
+           }
+           #menu1 a, #menu2 a, #menu3 a, #menu4 a{
+              color: #efefef;
+              text-decoration: none;
+           }
+           #menu1:hover, #menu2:hover, #menu3:hover, #menu4:hover{
+              background: #303030;
+           }
+           #menu1:hover #line{opacity: 1;}
+           #menu2:hover #line{opacity: 1;}
+           #menu3:hover #line{opacity: 1;}
+           #menu4:hover #line{opacity: 1;}
+          #menu3_1, #menu3_2, #menu3_3{
+              position: absolute;
+              margin-left: 49.4%;
+              width: 19%;
+              height: 50px;
+              padding-top: 17px;
+              background: #191919;
+              color: #efefef;
+              font-family: Tahoma;
+              font-size: 1.2em;
+              text-align: center;
+              border-bottom: 1px solid #efefef;
+              margin-top: -128px;
+              display: none;
+           }
+           #menu3_1:hover, #menu3_2:hover, #menu3_3:hover{
+              background: #303030;
+           }
+           #menu3_1 a, #menu3_2 a, #menu3_3 a{
+              color: #efefef;
+              text-decoration: none;
+           }
+  
+            
+           #outside_menu{
+              position: fixed;
+              width: 30%;
+              height: 100%;
+              margin-top: 68px;
+              background: #252525;
+              color: #ededed;
+              font-family: cursive;
+              font-size: 1.3em;
+              border-right: 3px solid #121212;
+              margin-left: calc(-30% - 13px);
+              display: none;
+              overflow-y: auto;
+              overflow-x: hidden;
+           }
+           #menu_1, #menu_2, #menu_3, #menu_5{
+              height: 40px;
+              padding-top: 10px;
+              padding-left: 20px;
+              padding-bottom: 7px;
+              border-bottom: 1px solid lightgrey;
+              cursor: pointer;
+           }
+           #menu_5 {border: none;}
+           #menu_1 a, #menu_2 a, #menu_3 a, #menu_4 a  {
+              color: #efefef;
+              text-decoration: none;
+           }
+           
+           #menu_1{
+              border-top: 1px solid lightgrey;
+           }
+           #menu_1:hover, #menu_2:hover, #menu_3:hover, #menu_4:hover{
+              background: #323232;
+           }
+           #card
+           {
+align-content: center;
+
+           }
+           .display-none:hover{
+              background: #ededed;
+           }
+           #outside{
+              width: 24.405555556%;
+              margin-left: 3.125%;
+              margin-top: 100px;
+              float: left;
+           }
+           #index_outside{
+              font-size: 1.4em; 
+              text-align: center;
+           }
+           #href{
+             background: white;
+             border: 1px solid lightgrey;
+             text-align: center;
+             font-size: 1.2em; 
+           }
+           #href1,  #href3{
+             padding-top: 7px;
+             padding-bottom: 7px;
+           }
+           #href1:hover,  #href3:hover{
+             background: #dddddd;
+             cursor: pointer;
+           }
+           #search{
+             width: 85%;
+             height: 30px;
+             margin-left: 7.5%;
+             border: 1px solid lightgrey;
+           }
+           #main{
+             padding-right: 3.125%; 
+             width: 62.5%;
+             margin-left: 34.4749996%;
+           }
+           .content{
+             width: 94%;
+             background: white;
+             border: 1px solid lightgrey;
+             font-size: 1.3em;
+             padding-left: 3%;
+             padding-right: 3%;
+             text-align: justify;
+             margin-top: 100px;
+           }
+           .content p{
+             text-indent: 20px;    
+           }
+           .first_a{
+             font-family: Georgia;
+             font-size: 1.6em;
+           }
+           #h{
+             text-align: center;
+             font-size: 1.5em;
+             font-family: cursive;
+             margin-top: 15px;
+             padding-bottom: 15px;
+             border-bottom: 1px solid lightgrey;
+             font-family: times new roman;
+           }
+           #photo{
+             width: 97%;
+             background: white;
+             border: 1px solid lightgrey;
+             margin-top: 50px;
+             padding-left: 2%;
+             padding-right: 1%;
+             padding-top: 15px;
+             padding-bottom: 10px;
+             display: table;
+           }
+           #photo img{
+             width: 33%;
+             height: auto;
+             float: left;
+             margin-left: 0.1%;
+             cursor: pointer;
+           }
+           #outher{
+             width: 100%;
+             height: 30%;
+             margin-top: 50px;
+             text-align: justify;
+             font-size: 1.2em;
+           }
+           #cols, #cols1, #cols2{
+             text-align: left;
+             width: 32%;
+             background: white;
+             height: auto;
+             float: left;  
+             padding-left: 3%;
+             padding-right: 3%;
+             padding-top: 3%;
+             border: 1px solid lightgrey;
+             box-sizing: border-box ;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             -i-box-sizing: border-box;
+             -o-box-sizing: border-box;
+             margin-bottom: 50px;
+           }     
+             
+           #cols #img1, #cols1 #img1, #cols2 #img1{ 
+             width: 100%;
+             height: auto;
+           }
+           #cols1, #cols2{
+             margin-left: 2%;
+           }
+           #cols a, #cols1 a, #cols2 a{
+             text-decoration: none;
+             color: #1e90ff;
+           }
+           #cols a:hover, #cols1 a:hover, #cols2 a:hover,{
+             text-decoration: underline;
+           }
+           #footer{
+             position: absolute;
+             bottom: -929px;
+             margin-top: 550px;
+             width: 100%;
+             margin-bottom: -10px;
+             height: 150px;
+             background: #202020;
+             z-index: 0;
+           }
+           #foot_line{
+            position: absolute;
+             bottom: -775px;
+              margin-top: 540px;
+             width: 100%;
+             margin-bottom: -10px;
+             background: white;
+             border-top: 1px solid lightgrey;
+             height: 10px;
+             z-index: 0;
+             
+
+           }
+     #foot_text{
+        float: left;
+         color: white;
+        font-size: 1.2em;
+        text-align: center;
+        width: 30%;
+        margin-left: 3.333%;
+        margin-top: 60px;
+             z-index: 0;
+     }
+     #foot_text a{
+        text-decoration: none;
+        color: #1e90ff;
+             z-index: 0;
+     }
+     #foot_text a:hover{
+        text-decoration: underline;
+     }
+     #scroll_bar{
+        position: fixed;
+        margin-top: 15px; 
+        margin-left: calc(100% - 40px);
+        cursor: pointer;
+        display: none;
+     }
+     #scroll_bar img{
+        width: 40px;
+        height: auto;
+     }
+     .z{
+        position: fixed;
+        margin-top: 15px; 
+        margin-left: calc(100% - 110px);
+        cursor: pointer;
+        display: none;
+     }
+     .z img{
+        width: 40px;
+        height: auto;
+     }
+
+     .body-active{
+       background: #222222;
+       position: fixed; 
+       opacity: 0.3;
+       width: 100%; 
+       height: 100%;
+       margin-top: -68px;
+        z-index: 1;
+     }
+     .photo-active{
+        background: white;
+        border: 1px solid lightgrey;
+        border-radius: 2%;
+        margin-left: 15%;
+        margin-top: calc(-68px + 1.5%);
+        width: 70%;
+        height: 95%; 
+        overflow: hidden;
+     }
+     .BigPhoto{
+        position: fixed;
+        z-index: 2;
+     } 
+     .BigPhoto .exit{
+        position: absolute;
+        margin-left: calc(100% - 90px);
+        margin-top: 15px;
+        width: 80px;
+        height: 80px;
+        display: none;
+        cursor: pointer;
+     }
+     .phone-BigPhoto{
+        width: 90%;
+        height: 100%;
+        margin-top: 0px;
+     }
+.founder{
+ margin-top: 50px;  
+ display: none;
+ margin-left: 25%;
+ width: 50%;
+}
+#index_founder{
+ font-size: 1.5em; 
+ text-align: center;
+}
+.search{
+ width: 100%;
+ height: 30px;
+ border: 1px solid lightgrey;
+ box-sizing: border-box ;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -i-box-sizing: border-box;
+ -o-box-sizing: border-box;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+.founder hr{
+ border: 0px solid #dedede;
+ height: 1px;
+ width: 100%;
+ background: #bbbbbb;
+ margin-top: 20px;
+}
+.answer .a_img{
+ width: 40%;
+ height: auto;
+}
+.answer .a_text a{
+ margin-left: 30%;
+ text-decoration: none;
+ color: #1e90ff;
+ cursor: pointer;
+}
+.answer .a_text a:hover{
+ text-decoration: underline;
+}
+.answer hr{
+ border: 0px solid #dedede;
+ height: 1px;
+ margin-left: 0%;
+ width: 100%;
+ background: #bbbbbb;
+ margin-top: 10px;
+}
+.answer .a_text{
+ margin-left: 40%;
+ margin-top: -27%;
+ float: left;
+ padding-left: 10px;
+ padding-right: 10px;
+ font-size: 1.15em;
+}
+.answer .ap{
+ text-indent: 10px;
+}
+.answer{
+ width: 100%;
+ background: white;
+ border: 1px solid lightgrey;
+ margin-top: 30px;
+ height: auto;
+ box-sizing: border-box ;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing:border-box ; 
+ -i-box-sizing: border-box;
+ -o-box-sizing: border-box;
+ margin-bottom: 10px;
+}
+.founder .back{
+ color: #1e90ff;
+ cursor: pointer;
+ margin-bottom: 30px;
+ margin-left: 10px;
+}
+.founder .back:hover{
+ text-decoration: underline;
+}
+.phone-founder{
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+.phone-founder #search2{
+  width: 90%;
+  margin-left: 5%;
+}
+           @media(max-width: 1060px){
+              #menu1, #menu2, #menu3, #menu4{
+                 font-size: 1.4em;
+              }
+             #content{
+                 text-align: left;
+                 font-size: 16px;
+             }
+             .founder{
+                 width: 76%;
+                 margin-left: 12%;
+             }
+           }
+           @media(max-width: 970px){
+              #menu_help{
+                 display: block;
+                 position: fixed;
+                 margin-top: -80px;
+                 font-family: times new roman;
+              }
+              #menu{
+                 width: calc(101.15% + 6px);
+                 position: fixed;
+                 margin-top: -100px;
+              }
+              #cols, #cols1, #cols2{
+                font-size: 16px;
+              }
+              #outside_menu{
+                 margin-top: -32px;
+                 display: block;
+                 font-family: times new roman;
+                 font-size: 1.1em;
+              }
+              #menu1, #menu2, #menu3, #menu4{
+                 display: none;
+              }
+              #outside{
+                 display: none;
+              }
+              #main{
+                 width: 86%;
+                 margin-left: 7%;
+                 margin-right: 7%;
+              }
+              #footer, #foot_line{
+                 display: none;
+              }
+              #scroll_bar{
+                 display: block;
+              }
+              .z{
+                 display: block;
+              }
+              .photo-active{
+                 width: 90%;
+                 height: 100%;
+                 margin-top: -102px;
+                 margin-left: 5%;
+              }
+              .answer .ap{
+                 font-size: 16px;
+              }
+              .founder{
+                 margin-top: 100px;
+              }
+           }
+           @media(max-width: 720px){
+              #cols, #cols1, #cols2{
+                 width: 100%;
+                 float: none; 
+              }
+              #cols1, #cols2{
+                 margin-left: 0%;
+                 margin-top: 50px;
+              }
+              #outside_menu{
+                 width: 40%;
+              }
+              .content{
+                 text-align: left;
+              }
+              .founder{
+                 width: 100%;
+                 margin-left: 0%;
+              }
+           }
+           @media(max-width: 500px){
+              #outside_menu{
+                 width: 60%;
+              }
+              #main{
+                 width: 99.7%;
+                 margin-left: 0%;
+                 padding-right: 0%;
+                 font-size: 0.9em;
+              }
+              body{
+                 max-width: 100%;
+              }
+              #photo{
+                 width: 100%;
+                 margin-left: 0%;
+                 margin-right: 0%;
+                 box-sizing: border-box ;
+                 -webkit-box-sizing: border-box;
+                 -moz-box-sizing: border-box;
+                 -i-box-sizing: border-box;
+                 -o-box-sizing: border-box;
+              }
+              .content{
+                 font-size: 16px;
+              }
+              .answer .a_text a{
+                 font-size: 16px;
+              }
+              .answer .a_img{
+                 display: none;
+              }
+              .answer .a_text{
+                 margin-left: 0%;
+                 width: 95%;
+                 height: auto;
+                 margin-top: 10px;
+                 float: none;
+              }
+           }
+           @media(max-width: 400px){
+              #photo img{ 
+                 margin-left: 3%;
+                 width: 45%;
+              }
+              #photo #img2{
+                 display: none;
+              }
+              .a_img{
+                 min-width: 50%;
+                 height: auto;
+              }
+           }
+           @media(max-width: 321px){
+              #outside_menu{
+                 width: 70%;
+              }
+              #photo{
+                 dispaly:none;
+              }
+              #menu_1, #menu_2, #menu_3, #menu_4{
+                 padding-left: 20px;
+                 font-size: 0.9em;
+                 height: 27px;
+              } 
+             
+              .a_img{
+                 min-width: 50%;
+                 height: auto;
+                 visibility: hidden;
+              }
+           }
+
+</style>
         
   </head>
        <body>
+  <div id="menu">
+             <div id="menu1"><a href="index.html">Школи <div id="line" style="opacity: 1;"></a></div></div>
+            <div id="menu2"><a href="sad.html">Садки <div id="line"></a></div></div>
+             <div id="menu3"><a href="info.html">Про нас <div id="line"></a></div></div>
+             <div id="menu4"><a href="reg.html">Реєстрація <div id="line"></a></div></div>
+                        
+                   </div>
 
-                
-             <div id="menu1"><a href="/">Школи <div id="line" style="opacity: 1;"></a></div></div>
-            <div id="menu2"><a href="/sad">Садки <div id="line"></a></div></div>
-             <div id="menu3"><a href="/info">Про нас <div id="line"></a></div></div>
-             <div id="menu4"><a href="/reg">Реєстрація <div id="line"></a></div></div>
+<div class="dropdown">
+  <button class="mainmenubtn"> 
+<p></p>
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
 
+  </button>
+  <div class="dropdown-child">
+    <a href=" " >Фізмат <form> <input type="checkbox"></form></a>
+    <a href=" ">Хімбио<form> <input type="checkbox"></form></a>
+    <a href=" ">Спортивна <form> <input type="checkbox"></form></a>
+    <a href= "">Художня<form> <input type="checkbox"></form></a>
+    <a > <script>
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+</script>
               
- 
+            <h1>Средние балы ЗНО</h1>
 
+<div class="""slidecontainer">
+  <input type="range" min="1" max="200" value="0" class="slider" id="myRange">
+  <p>Value: <span id="demo"></span></p>
+</div>
 
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
 
- 
-     <div id="menu"><div class="z"><img src="image/search.png" onclick=Founder()></div><div id="scroll_bar"><img src="image/scroll.png" onclick=up(0)></div></div>
-
-              
-              <div id="outside_menu"> 
-              </div>
-                   
-                <div id="outside">
-                    <p id="index_outside">Навігація по сторінці</p>
-                      <div id="href">
-                        <div id="href1" onclick=up(0)>На початок</div>
-                        <div id="href3" onclick=up(-1)>У кінець</div>
-                      </div>
-                    <p id="index_outside" style="margin-top: 50px;">Пошук на сайті</p>
-                     <input type="search" id="search">
-                </div>
-
-
-                               <div class="Background"></div><div class="BigPhoto"><img class="exit" onclick="Exit()" src="image/exit.png"><img id="bigPhoto"></div>
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>         </a>
+  </div>
+</div>
+                        <div id="new">
 
                 <div id="main">
                     <div class="content">
-                      <div id="h">Пошук шкіл на карті  </div>
-                   <p id="card"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2539.8900765160893!2d30.4813414!3d50.4617716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce7976bee27b%3A0x1d3e315c9ebba01c!2z0JvRg9C6J9GP0L3RltCy0YHRjNC60LA!5e0!3m2!1suk!2sua!4v1531813461281" width="715" height="450" frameborder="0" style="border:0" allowfullscreen>         
-                   </iframe></p>
-
-
-
-                    </div>
-
+                      <div id="h" >Пошук шкіл на карті  </div>
                     
-                    <div id="outher">
-                        <div id="cols">
-                           <img id="img1" src=" im .jpg">
-                            <a href="str1.html">Школа </a>
-                            <p class="cp">Ссылка и описание</p>
-                        </div>
-                        <div id="cols1">                        
-                          <img id="img1" src="image/7.jpg"> 
-                           <a href="str2.html">Школа </a>
-                            <p class="cp">Ссылка и описание</p>
-                        </div>
-                        <div id="cols2">                       
-                          <img id="img1" src="image/6.jpg"> 
-                           <a href="str3.html">Школа </a>
-                            <p class="cp">Ссылка и описание </p>
-                        </div>
-                    </div>
+                   <p ><iframe id="card" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2539.8900765160893!2d30.4813414!3d50.4617716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce7976bee27b%3A0x1d3e315c9ebba01c!2z0JvRg9C6J9GP0L3RltCy0YHRjNC60LA!5e0!3m2!1suk!2sua!4v1531813461281" width="700" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>         
+                          
                 </div>
 
-             <div class="founder">
-               <p id="index_founder">Пошук на сайті</p>
-               <input type="search" class="search" placeholder="Що шукати?">
-                 <hr>
-                  <div id="result"></div>
-                  <div class="hr-br"></div>
-                  <div class="back" onclick="ExitFoundMode()">Повернутися до сайту.</div>
-             </div>
+                 <div id="outher">
+                    <% schools.forEach(function(schools){ %>
+                      <img id="img1" src="<%= schools.image %>">
+                      <a href="<%= schools.site %>">Школа </a>
+                       
+                      <p class="cp"> <a href="Інфо про заклад.html">Інформація про заклад</a></p>
+
+                    <% }); %>
+
+                 </div>
+                    	 
+                    
+             
+               
+             
 
                 <div id="foot_line"></div>
               <div id="footer">
